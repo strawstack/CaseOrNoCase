@@ -136,6 +136,7 @@
             }, 0);
             const ev = round(caseTotal / casesLeft);
             if (counter === null) {
+                setBtns(true, false, false);
                 notifyNextSelection();
                 state.step = state.stepType.CHOOSE;
 
@@ -144,7 +145,7 @@
                 state.done = true;
                 setBtns(false, false, false);
                 removeEventListeners();
-                
+
             } else {
                 const msg = `Offer of $${round(counter)} refused.`;
                 const row = createRow();
