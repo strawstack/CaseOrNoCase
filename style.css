@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+}
+
+body, .area {
+    height: 800px;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.area {
+    border: 1px solid #555;
+    display: grid;
+    grid-template-rows: 700px 100px;
+    max-width: 1000px;
+
+    .log {
+        overflow-y: scroll;
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #555;
+
+            .case {
+                border: 1px solid #555;
+                margin: 10px 0px 0px 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                width: 60px;
+
+                &.selected {
+                    color: lightgrey;
+                }
+            }
+        }
+    }
+
+    .action-area {
+        border: 1px solid #555;
+        display: flex;
+        align-items: center;
+
+        .btn {
+
+            margin-left: 20px;
+            height: 60px;
+            width: 120px;
+            background: goldenrod;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+
+            &.deactive {
+                color: grey;
+                background: lightgray;
+                cursor: not-allowed;
+            }
+
+            &.next {
+
+            }
+    
+            &.accept {
+    
+            }
+    
+            &.counter {
+    
+            }
+        }
+    }
+}
